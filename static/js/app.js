@@ -144,10 +144,6 @@ function handleChange(){
   filtered = filtered.filter(i => i.shape == shape);
   };
 
-  //refresh dropdown options
-  dropdown_options(filtered)
-
-
   //input this new data object into our function to output the table
   create_table(filtered)
 
