@@ -57,8 +57,8 @@ var state=[];
 var country=[];
 var shape=[];
 
-function dropdown_options(data){
-Object.entries(data).forEach(function([key,value]){
+function dropdown_options(d){
+Object.entries(d).forEach(function([key,value]){
 //push values to array  
 datetime.push(value["datetime"])
 city.push(value["city"])
@@ -144,11 +144,15 @@ function handleChange(){
   filtered = filtered.filter(i => i.shape == shape);
   };
 
+
   //input this new data object into our function to output the table
-  create_table(filtered)
+  create_table(filtered);
 
 }
 
-
 //event
 button.on("click", handleChange)
+
+//d3.select("#country").selectAll('*').remove()
+// d3.select("#country").append("option").text("Select Below")
+// console.log(d3.select('#country').property("value"))
